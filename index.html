@@ -30,51 +30,54 @@
             <p>Desde 2003 com experiência com os DETRANs, o IBAP-RJ traz um curso online para você passar na prova de
                 primeira, com praticidade e confiança</p>
             <div class="botoes-ibap">
-                <button>Certificações ISO</button>
-                <button>Como funciona?</button>
+                <button id="iso">Certificações ISO</button>
+                <button id="funcao">Como funciona?</button>
             </div>
         </div>
 
-        <div class="video">
+        <div class="video-ibap">
             <iframe src=""></iframe>
         </div>
     </section>
 
     <section id="estatisticas">
         <div class="estatisticas">
-            <h2>+ 300 mil</h2>
+            <h2 class="contador" data-valor="300000" data-format="mil">0</h2>
             <p>Horas de consultoria</p>
         </div>
 
         <div class="estatisticas">
-            <h2>+10 milhões</h2>
+            <h2 class="contador" data-valor="10000000" data-format="milhões">0</h2>
             <p>de Atendimentos em centrais</p>
         </div>
 
         <div class="estatisticas">
-            <h2>+4 milhões</h2>
+            <h2 class="contador" data-valor="4000000" data-format="milhões">0</h2>
             <p>de Provas Eletrônicas aplicadas</p>
         </div>
 
         <div class="estatisticas">
-            <h2>+45</h2>
+            <h2 class="contador" data-valor="45" data-format="">0</h2>
             <p>Clientes Institucionais</p>
         </div>
     </section>
 
+
+
     <section id="sobre-curso">
         <h2>Sobre o Curso</h2>
         <div class="sobre-curso">
-            <div>
+            <div id="info">
                 <h3>Pra quem é?</h3>
                 <p>Para jovens e adultos que vão tirar a primeira habilitação e precisam se preparar par o exame
                     teórico. Pessoas que preferem estudar de forma online e no seu próprio ritmo, Totalmente enquadrado
                     com a Legislação em vigor.</p>
             </div>
 
-            <div>
+            <div id="info">
                 <h3>Pré-Requisitos:</h3>
-                <p>Idade mínima de 18 anos completos.Acesso à Internet e a um dispositivo(computador, tablet ou celular)
+                <p>Idade mínima de 18 anos completos. Acesso à Internet e a um dispositivo(computador, tablet ou
+                    celular)
                     para acompanhar as aulas e realizar os simulados.</p>
             </div>
         </div>
@@ -82,17 +85,15 @@
         <div class="midia">
             <div class="video">
                 <iframe src=""></iframe>
-                <div>
-                    <h4>Carga Horária</h4>
-                    <span> <img src="/Painel/assets/timer.png" alt="Relógio">45 horas</span>
-                    <h4>Prazo para conclusão</h4>
-                    <span> <img src="/Painel/assets/calendar.png" alt="Calendário">21 dias</span>
-                </div>
+                <h4>Carga Horária</h4>
+                <span> <img src="/Painel/assets/timer.png" alt="Relógio">45 horas</span>
+                <h4>Prazo para conclusão</h4>
+                <span> <img src="/Painel/assets/calendar.png" alt="Calendário">21 dias</span>
                 <a href="/">Acesse o Curso</a>
             </div>
 
             <div class="apostila">
-                <img src="/" alt="Apostila">
+                <img src="/Painel/assets/Ebookcnh.png" alt="Apostila">
             </div>
         </div>
 
@@ -119,9 +120,8 @@
         <h2>Teste seus conhecimentos</h2>
         <div class="teste">
             <h5>Responda 5 questões da prova teórica.</h5>
-
             <div class="pergunta ativa" data-resposta="c">
-                <h2>Sobre a prioridade de oassagem nas vias, assinale a alternativa correta:</h2>
+                <h2>Sobre a prioridade de passagem nas vias, assinale a alternativa correta:</h2>
                 <label><input type="radio" name="q1" value="a">Veículos motorizados têm sempre prioridade sobre
                     pedestres.</label>
                 <label><input type="radio" name="q1" value="b">A prioridade é de quem está em maior velocidade.</label>
@@ -129,7 +129,6 @@
                     regulamentadas.</label>
                 <label><input type="radio" name="q1" value="d">Bicicletas sempre têm prioridade sobre
                     âmbulancias.</label>
-
             </div>
 
             <!-- Pergunta 2 -->
@@ -171,7 +170,6 @@
             </div>
 
             <!-- Resultado e Gabarito -->
-            <h5>Resultado</h5>
             <div class="acoes-finais" id="acoesFinais">
                 <button onclick="mostrarGabarito()">Ver Gabarito</button>
                 <a href="/" class="cta">Matricule-se agora</a>
@@ -181,18 +179,20 @@
         </div>
     </section>
 
-    <section id="Conteudo">
+    <section id="conteudo">
         <h2>Conheça nosso conteúdo</h2>
         <div class="conteudo">
             <iframe src=""></iframe>
-        </div>
-        <div id="media-curso">
-            <img src="" alt="Curso">
-            <iframe src="" ></iframe>
+
+            <div id="media-curso">
+                <img src="" alt="Curso">
+                <iframe src=""></iframe>
+            </div>
         </div>
     </section>
 
     <section id="passos">
+        <h2>Como Funciona?</h2>
         <div class="passos-cards">
             <div class="card-passo">
                 <span>1</span>
@@ -222,8 +222,9 @@
 
     <section id="matricula">
         <h2>Matricule-se agora mesmo!</h2>
+        <h4>Pagamento seguro e acesso imediato</h4>
         <div id="card-matricula">
-            <h2>Plano Único</h2>
+            <h3>Plano Único</h3>
             <div class="preco">
                 R$199,90
                 <span>à vista ou em até 12x</span>
@@ -235,6 +236,10 @@
                 <li>Certificado de Conclusão</li>
             </ul>
         </div>
+        <div class="botoes">
+            <a href="/"><button id="compra">Comprar agora</button></a>
+            <a href="/"><button id="duvida">Tirar dúvidas</button></a>
+        </div>
     </section>
 
 
@@ -244,8 +249,11 @@
 
 </body>
 
+<script src="https://player.vimeo.com/api/player.js"></script>
+
 <script src="/Painel/script.js"></script>
 <!-- Elfsight Accessibility | Untitled Accessibility -->
+
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-56ece540-c331-484e-9837-d3a64444b073" data-elfsight-app-lazy></div>
 
