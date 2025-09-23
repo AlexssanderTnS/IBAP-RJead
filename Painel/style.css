@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --cor-primaria: #01529F;
     --cor-utilitaria: #F1C12E;
     --branco: #f5f5f5;
-    --cards: #fff;
+    --cards: #E4EBF2;
 
 }
 
@@ -19,12 +20,16 @@ html {
 
 }
 
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body {
-    font-family: Nunito, sans-serif;
+    font-family: Montserrat, sans-serif;
     background-color: var(--branco);
     height: auto;
-
 }
+
 
 
 header {
@@ -83,16 +88,17 @@ a:hover {
 .info-ibap h1 {
     border-bottom: 3px solid var(--cor-utilitaria);
     border-bottom-width: 4px;
+    border-spacing: 500px;
     margin-bottom: 50px;
     width: 50%;
-    font-weight: 800;
-    font-size: 35px !important;
+    font-weight: 700;
+    font-size: 32px !important;
 }
 
 .info-ibap p {
-    font-size: 20px !important;
+    font-size: 19px !important;
     font-weight: 800;
-    width: 45%;
+    width: 50%;
 
 }
 
@@ -103,7 +109,7 @@ a:hover {
     display: flex;
     gap: 10px;
     /* espaço entre os botões */
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
 .botoes-ibap button {
@@ -157,13 +163,19 @@ a:hover {
 }
 
 .estatisticas {
-    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+}
+
+
+.estatisticas1 {
     padding: 20px;
 }
 
 /* Container geral da seção */
 #sobre-curso {
-    padding: 40px;
+
+    padding: 80px;
     background: #f8f9fb;
     /* fundo claro */
 }
@@ -303,7 +315,7 @@ a:hover {
     flex-direction: column;
     background-color: var(--cards);
     justify-content: space-between;
-    padding: 39px;
+    padding: 79px;
     align-content: flex-end;
     flex-wrap: nowrap;
 }
@@ -333,7 +345,7 @@ a:hover {
 
 #conteudo {
     display: flex;
-    padding: 40px;
+    padding: 80px;
     flex-direction: column;
 
 }
@@ -353,7 +365,7 @@ a:hover {
 
 
 #passos {
-    padding: 40px;
+    padding: 80px;
     background-color: var(--cards);
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -401,10 +413,10 @@ a:hover {
 
 #matricula {
     text-align: center;
-    padding: 40px;
+    padding: 80px;
     display: flex;
     align-items: center;
-    background: #eaf2f9;
+    background: var(--cards);
     flex-direction: column;
 }
 
@@ -481,7 +493,7 @@ a:hover {
     font-size: 14px;
 }
 
-.botoes{
+.botoes {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -490,7 +502,7 @@ a:hover {
     justify-content: space-around;
 }
 
-#compra{
+#compra {
     background-color: var(--cor-utilitaria);
     padding: 15px;
     color: #333;
@@ -499,7 +511,7 @@ a:hover {
 
 }
 
-#duvida{
+#duvida {
     background-color: var(--cor-primaria);
     padding: 15px;
     color: var(--branco);
@@ -508,13 +520,143 @@ a:hover {
 
 }
 
-.botoes button:hover{
-   transform: translateY(-2px);
+.botoes button:hover {
+    transform: translateY(-2px);
     box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
 
+/* Barra de progresso de leitura */
+.progress-container {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* acima de tudo */
+}
 
+.progress-bar {
+    height: 100%;
+    width: 0;
+    /* Exemplo de gradiente inspirado: azul forte, verde, roxo vibrante, amarelo/laranja */
+    background: linear-gradient(27deg, #005cbf, #F1C12E, #00d48d, #01529F, #ffd700, #ff6f00);
+    background-size: 400% 400%;
+    animation: moveGradient 5s linear infinite;
+    transition: width 0.1s linear;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#depoimentos {
+    padding: 80px;
+    background: var(--branco);
+    box-shadow: 1px 5px 15px #000;
+}
+
+#depoimentos h2 {
+    color: var(--cor-primaria);
+    font-size: 30px !important;
+    margin-bottom: 40px;
+}
+
+.depoimentos-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.balao {
+    position: relative;
+    max-width: 250px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-style: italic;
+    color: #333;
+}
+
+.balao::after {
+
+    position: absolute;
+    bottom: -15px;
+    left: 30px;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #ccc transparent transparent transparent;
+}
+
+.aspas {
+    font-size: 6rem !important;
+    color: #999;
+}
+
+.celular img {
+    max-width: 500px;
+    height: auto;
+}
+
+#faq {
+    background: var(--cards); 
+    padding: 80px;
+    margin: 0 auto;
+}
+
+#faq h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-questao {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-questao:hover {
+    background: #f1f1f1;
+}
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    padding: 0 20px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-resposta p {
+    margin-bottom: 30px;
+}
 
 
 
@@ -636,7 +778,7 @@ label {
     margin-top: 20px;
     padding: 15px;
     border: 1px solid #ccc;
-    background: #f9f9f9;
+    background: var(--cards);
 }
 
 #gabarito h3 {
@@ -645,12 +787,13 @@ label {
 
 .cta {
     background-color: var(--cor-utilitaria);
-    color: white;
+    color: #333;
     border: none;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .cta:hover {
-    transform: scale(1.02);
+    background-color: #c49e17f5;
+    color: var(--branco)
 }

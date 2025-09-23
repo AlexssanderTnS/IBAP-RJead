@@ -125,8 +125,8 @@ function mostrarGabarito() {
       <button onclick="refazerQuiz()" style="
         margin-top:15px;
         padding:10px 20px;
-        background:#F1C12E;
-        color: #000;
+        background: var(--cor-utilitaria);
+        color: #333;
         border:none;
         border-radius:5px;
         cursor:pointer;">
@@ -157,3 +157,42 @@ function refazerQuiz() {
     document.getElementById("acoesFinais").style.display = "none";
     document.getElementById("gabarito").style.display = "none";
 }
+
+// barra de leitura
+
+// Barra de progresso de leitura
+window.addEventListener("scroll", function () {
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById("progressBar").style.width = progress + "%";
+});
+
+
+// Perguntas frequentes
+
+// FAQ accordion
+const questions = document.querySelectorAll(".faq-questao");
+
+questions.forEach(q => {
+    q.addEventListener("click", () => {
+        const answer = q.nextElementSibling;
+
+        // Fecha todas as outras
+        document.querySelectorAll(".faq-resposta").forEach(ans => {
+            if (ans !== answer) {
+                ans.style.maxHeight = null;
+                ans.style.padding = "0 20px";
+            }
+        });
+
+        // Alterna a clicada
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            answer.style.padding = "0 20px";
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            answer.style.padding = "15px 20px";
+        }
+    });
+});
