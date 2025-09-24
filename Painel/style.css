@@ -7,6 +7,7 @@
     --branco: #f5f5f5;
     --cards: #E4EBF2;
 
+
 }
 
 * {
@@ -27,10 +28,13 @@ p {
 body {
     font-family: Montserrat, sans-serif;
     background-color: var(--branco);
-    height: auto;
+    color: #333;
 }
 
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
 
 header {
     position: sticky;
@@ -105,11 +109,9 @@ a:hover {
 
 .botoes-ibap {
     position: relative;
-    top: 35px;
     display: flex;
-    gap: 10px;
-    /* espaço entre os botões */
-    margin-top: 35px;
+    gap: 30px;
+    margin-top: 8%;
 }
 
 .botoes-ibap button {
@@ -614,7 +616,7 @@ a:hover {
 }
 
 #faq {
-    background: var(--cards); 
+    background: var(--cards);
     padding: 80px;
     margin: 0 auto;
 }
@@ -657,82 +659,6 @@ a:hover {
 .faq-resposta p {
     margin-bottom: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .pergunta {
     display: none;
@@ -796,4 +722,15 @@ label {
 .cta:hover {
     background-color: #c49e17f5;
     color: var(--branco)
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
 }
