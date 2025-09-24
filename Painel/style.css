@@ -91,13 +91,20 @@ a:hover {
 }
 
 .info-ibap h1 {
-    border-bottom: 3px solid var(--cor-utilitaria);
-    border-bottom-width: 4px;
-    border-spacing: 500px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 50%;
     font-weight: 700;
     font-size: 28px !important;
+    color: #DFE7EF;
+}
+
+.info-ibap .barra {
+    position: fixed;
+    top: 200px;
+    width: 50%;             /* mesmo tamanho do h1 */
+    height: 4px;            /* espessura da barra */
+    background: var(--cor-utilitaria);
+    margin-bottom: 30px;    /* espaço antes do parágrafo */
 }
 
 .info-ibap p {
