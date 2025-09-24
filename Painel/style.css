@@ -33,9 +33,7 @@ body {
 }
 
 
-/* body::-webkit-scrollbar {
-    width: 8px;
-} */
+
 
 header {
     position: sticky;
@@ -79,7 +77,7 @@ a:hover {
     background-color: var(--cor-primaria);
     display: flex;
     flex-direction: row;
-    height: 400px;
+    height: 350px;
     padding: 70px;
 }
 
@@ -100,12 +98,13 @@ a:hover {
 
 .info-ibap .barra {
     position: fixed;
-    top: 200px;
-    width: 50%;             /* mesmo tamanho do h1 */
-    height: 4px;            /* espessura da barra */
+    top: 205px;
+    width: 35%;
+    height: 4px;
     background: var(--cor-utilitaria);
-    margin-bottom: 30px;    /* espaço antes do parágrafo */
-}
+    margin-bottom: 30px;
+} 
+
 
 .info-ibap p {
     font-size: 19px !important;
@@ -119,7 +118,7 @@ a:hover {
     position: relative;
     display: flex;
     gap: 30px;
-    margin-top: 4%;
+    margin-top: 8%;
 }
 
 .botoes-ibap button {
