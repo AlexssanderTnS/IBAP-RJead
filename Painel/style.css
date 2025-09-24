@@ -730,64 +730,55 @@ footer {
     color: var(--branco);
     text-align: center;
     padding: 20px;
-    height: 370px;
+    height: 170px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-#content {
+footer p {
+    padding: 30px;  
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+
+#rodape{
     display: flex;
     flex-direction: column;
+
     align-items: center;
 }
 
-#content ul {
+#rodape ul{
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+    margin: 10px 0;
+    color: var(--branco);
 }
-
-#content ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
+#rodape ul a{
+    text-decoration: none;
+    color: var(--branco);
     cursor: pointer;
+    font-weight: 700;
 }
 
-#content ul a:hover {
+#rodape ul a:hover{
     color: var(--cor-utilitaria);
 }
 
-#contato {
+.redes-sociais{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: var(--branco);
 }
 
-#contato ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.redes-sociais a{
+    color: var(--branco);
 }
 
-#contato ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#contato ul a:hover {
-    color: var(--cor-utilitaria);
-}
-
-.contato{
-    width: 125%;
-}
-
-#Logobottom{
-    width: 20%;
-    margin-top: 20px;
-}
-
-#Logobottom img{
-    width: 60%;
+.redes-sociais img{
+    width: 55px;
 }
