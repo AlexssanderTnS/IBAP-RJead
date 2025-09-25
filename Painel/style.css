@@ -62,7 +62,7 @@ ul {
 
 ul a {
     text-decoration: none;
-    color: black;
+    color: #333;
     cursor: none;
     font-weight: 700;
 }
@@ -89,21 +89,17 @@ a:hover {
 }
 
 .info-ibap h1 {
-    margin-bottom: 20px;
+    border-bottom: 3px solid var(--cor-utilitaria);
+    border-bottom-width: 4px;
+    border-spacing: 500px;
+    margin-bottom: 50px;
     width: 50%;
     font-weight: 700;
-    font-size: 28px !important;
-    color: #DFE7EF;
+    font-size: 32px !important;
+
+    
 }
 
-.info-ibap .barra {
-    position: fixed;
-    top: 205px;
-    width: 35%;
-    height: 4px;
-    background: var(--cor-utilitaria);
-    margin-bottom: 30px;
-} 
 
 
 .info-ibap p {
@@ -118,7 +114,7 @@ a:hover {
     position: relative;
     display: flex;
     gap: 30px;
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
 .botoes-ibap button {
@@ -680,11 +676,20 @@ h2 {
     margin-bottom: 10px;
 }
 
+
+
 label {
     display: block;
-    margin: 5px 0;
+    margin: 10px 10px;
     cursor: pointer;
 }
+
+input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+    border: #1e7e34;
+}
+
 
 #resultado {
     font-weight: bold;
@@ -694,7 +699,6 @@ label {
 
 .acoes-finais {
     display: none;
-    /* só aparece no fim */
     margin-top: 20px;
 }
 
