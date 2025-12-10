@@ -108,8 +108,16 @@ a:hover {
 }
 
 #historia {
-  background-color: #01529f;
+  background-color: #f3f3f3;
   height: 260px;
+}
+
+#historia p{
+  color: #333;
+}
+
+#historia h1{
+  color:#004a9f;
 }
 
 div.infoH {
